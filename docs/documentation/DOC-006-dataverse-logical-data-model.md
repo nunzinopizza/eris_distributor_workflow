@@ -2,7 +2,7 @@
 
 **Solution:** ERIS Distributor Cider Order-to-Payment Solution  
 **Version:** 0.1  
-**Status:** Draft  
+**Status:** Needs Refinement\
 **Dependency order:** 6  
 **Owner:** To be assigned  
 **Last updated:** July 25, 2026 - 7:35 AM CT  
@@ -23,7 +23,7 @@ This document is limited to the subject identified by its title. It does not rep
 
 ## 4. Current Status
 
-**Draft**
+**Needs Refinement**
 
 Status is assigned under `STATUS_DEFINITIONS.md`. No percentage-complete estimate is used.
 
@@ -32,6 +32,7 @@ Status is assigned under `STATUS_DEFINITIONS.md`. No percentage-complete estimat
 | Version | Date | Status | Description |
 |---|---|---|---|
 | 0.1 | July 25, 2026 | Draft | Initial controlled repository document created from verified project sources. |
+| 0.2 | July 25, 2026 | Needs Refinement | Aligned this control record with the substantive logical model and recorded the unresolved Order-status conflict. |
 
 ## 6. Known Completed Sections
 
@@ -39,19 +40,21 @@ Status is assigned under `STATUS_DEFINITIONS.md`. No percentage-complete estimat
 - Permanent Internal Order ID and document-specific reference behavior are defined.
 - Product-price snapshots and source-of-truth relationships are defined.
 - Audit expectations require user, timestamp, record, document version, and action.
+- The substantive logical model is present at `../dataverse-logical-model-v0.1.md` and defines records, relationships, lifecycle fields, ownership requirements, preservation controls, and the physical-design handoff.
 
 ## 7. Needs Refinement
 
-- The current logical data-model work from the active project branch has not been imported into this repository package.
+- The overall Order status values in the logical model do not match the controlling production specification; OD-26 preserves this as an unresolved cross-document conflict.
 - Cardinalities, optionality, ownership, alternate keys, and choice ownership require formal review.
 - Approval submission cycles, document versions, email attachments, settlement allocation, and event history need relationship validation.
 
 ## 8. Tasks to Complete
 
-- [ ] Import the current logical data model from the project repository.
-- [ ] Reconcile it against the Version 0.1 core-record list.
+- [x] Locate and register the substantive logical model in this repository.
+- [ ] Resolve OD-26 through an approved decision before changing lifecycle values or mappings.
+- [ ] Reconcile the substantive logical model against the Version 0.1 core-record list.
 - [ ] Define cardinalities, business keys, ownership, and lifecycle for every entity.
-- [ ] Perform normalization and auditability review before Needs Refinement status.
+- [ ] Perform normalization and auditability review before the model advances beyond Needs Refinement.
 
 ## 9. Deferred Decisions
 

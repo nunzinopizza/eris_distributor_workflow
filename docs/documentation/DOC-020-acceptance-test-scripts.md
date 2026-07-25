@@ -35,11 +35,11 @@ Status is assigned under `STATUS_DEFINITIONS.md`. No percentage-complete estimat
 
 ## 6. Known Completed Sections
 
-- No substantive section is complete yet.
+- `../acceptance-tests.md` contains 23 substantive pass/fail acceptance scenarios mapped to specification sections and traceability identifiers.
 
 ## 7. Needs Refinement
 
-- None documented at this stage; the document remains dependent on prerequisite work.
+- The substantive scenarios have not yet been expanded into executable scripts with prerequisites, detailed steps, expected evidence, execution results, and approval records.
 
 ## 8. Tasks to Complete
 
