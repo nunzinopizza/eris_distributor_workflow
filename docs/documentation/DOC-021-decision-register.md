@@ -35,24 +35,25 @@ Status is assigned under `STATUS_DEFINITIONS.md`. No percentage-complete estimat
 
 ## 6. Known Completed Sections
 
-- Deferred items are listed in Section 38 of the Version 0.1 blueprint.
+- Deferred build-stage decisions are listed in §25 of the controlling production specification.
+- `../open-decisions.md` is the substantive project decision register and contains stable `OD-*` identifiers.
 - Known open decisions include approval reminders, Close Approval authority, role matrix, pickup-time approval reset, edit-lock timeout, copy-order initial state, suggested-PO approval/send behavior, revised-email statuses, attachment-category rules, invoice date display, Internal Order ID footer, post-approval edits, invoice send failure, duplicate-send controls, error messages, holiday calendar, and visual refinements.
+- OD-26 records the unresolved conflict between the overall Order status values in the production specification and logical model without selecting a mapping or default.
 
 ## 7. Needs Refinement
 
-- Decision IDs must be reconciled with the project's existing open-decisions file.
 - Owners, target dates, options, rationale, resolution, and affected artifacts are not complete.
 
 ## 8. Tasks to Complete
 
-- [ ] Import the existing open-decisions register from the repository.
-- [ ] Assign stable IDs and affected-document links.
+- [x] Identify the substantive open-decisions register and its stable IDs.
+- [ ] Keep this control record aligned with `../open-decisions.md`.
 - [ ] Add decision owner, required-by milestone, options, outcome, rationale, and approval evidence.
 - [ ] Update dependent document statuses whenever a decision is resolved.
 
 ## 9. Deferred Decisions
 
-See `DOC-021-decision-register.md`. Only decision entries supported by the controlling specification or repository records may be added.
+See the substantive project register at `../open-decisions.md`. Only decision entries supported by the controlling specification or repository records may be added.
 
 ## 10. References
 

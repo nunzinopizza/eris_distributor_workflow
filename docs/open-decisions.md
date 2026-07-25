@@ -31,10 +31,11 @@ The entries below are not new business rules. They either reproduce a deferred d
 | OD-23 | Unclear requirement | §4; §17 | Follow-ups are “next business day” then “daily/calendar day”; holidays and the meaning of the third unanswered follow-up need operational test cases. | Approved schedule examples aligned to the holiday decision. |
 | OD-24 | Unclear requirement | §3; §13; §21 | The exact allowable sequence of BOL Generated, Reprint Required, Finalized, and Confirmed Printed is not expressed as a transition table. | State-transition table without changing stated blockers. |
 | OD-25 | Unclear requirement | §3; §17 | A canceled order cannot reopen, while a declined order may be revised under the same order or copied. These are not contradictory, but the system must distinguish “declined” from “canceled” visibly. | Defined lifecycle terminology and transitions. |
+| OD-26 | Cross-document conflict | §21; `docs/dataverse-logical-model-v0.1.md` §6.1 | The production specification and logical model define different controlled values for the overall Order lifecycle. No mapping, replacement, or ownership reassignment between Order, PO, communication, and confirmation states is approved. | Approved status-ownership and mapping decision, followed by controlled updates to the production specification, logical model, traceability, and tests. |
 
 ## Contradiction review
 
-No direct contradiction was found among the approved requirements. The items labelled **Unclear requirement** identify places where more precision is needed for a build or test; they are not contradictions and do not authorize a default behavior.
+OD-26 records a direct cross-document conflict between the overall Order status values in the controlling production specification and the logical model. Neither status set is changed by this register, and no mapping or default behavior is authorized. The other items labelled **Unclear requirement** identify places where more precision is needed for a build or test; they are not contradictions and do not authorize a default behavior.
 
 ## Resolution rule
 

@@ -13,7 +13,7 @@ Define the verified business rules and solution boundary for the distributor cid
 
 ## 2. Scope
 
-This document is limited to the subject identified by its title. It does not replace the Business Requirements Specification or any dependent technical specification.
+This documentation-control record tracks the Business Requirements Specification. It does not replace the controlling production specification or any dependent technical specification.
 
 ## 3. Dependencies
 
