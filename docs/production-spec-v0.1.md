@@ -1,4 +1,6 @@
+
 # Distributor Cider Order-to-Payment Workflow
+
 ## Production Solution Documentation - Version 0.1
 
 **Organization:** ERIS Brewery & Cider House
@@ -8,7 +10,7 @@
 
 ---
 
-# Layer 1 - One-Page Workflow Overview
+## Layer 1 - One-Page Workflow Overview
 
 | Field | Approved working definition |
 | --- | --- |
@@ -23,23 +25,28 @@
 | Completion standard | Closed order, confirmed settlement, final PDF packet, linked source emails and attachments, retained document versions, and complete order event history. |
 
 ### One-sentence outcome
+
 A distributor order is converted into controlled PO, BOL, invoice, communication, approval, pickup, payment, and closeout records, with the correct document versions sent and a complete audit trail retained.
 
 *Section status: approved build baseline. July 19, 2026 - 11:28 AM CT*
 
 ---
 
-# Layer 2 - Operating and Technical Documentation
+## Layer 2 - Operating and Technical Documentation
 
-## 1. Documentation model
+### 1. Documentation model
+
 This production package intentionally separates business actions from Power Automate mechanics. The operating sections explain what the business process must do. The technical register records how the solution will be implemented and clearly labels details that are still unresolved.
 
 The package includes the three views required to preserve the current process while defining the automation:
+
 - Current manual/workbook process
 - Target automated process
 - Exceptions that still require a person
 
 *Section status: approved documentation structure. July 19, 2026 - 11:28 AM CT*
+
+---
 
 ## 2. Current process, automated process, and human exceptions
 
@@ -138,6 +145,7 @@ The package includes the three views required to preserve the current process wh
 ## 5. Exceptions and controls
 
 ### 5.1 Human review is required for
+
 - Ambiguous email, order, PO, BOL, confirmation, or remittance matches.
 - Incomplete order intake and missing required data.
 - New distributor contacts and products created by authorized users.
@@ -151,6 +159,7 @@ The package includes the three views required to preserve the current process wh
 - Final packet review and Close Order.
 
 ### 5.2 The system must never do these automatically
+
 - Guess an ambiguous record or email match.
 - Use a free-form external recipient.
 - Add a free-form product line.
@@ -164,6 +173,7 @@ The package includes the three views required to preserve the current process wh
 - Allow ordinary users to edit controlled banking information.
 
 ### 5.3 Duplicate and version controls
+
 - Permanent sequential Internal Order ID for every created order.
 - System-wide daily two-digit document suffix to prevent same-day reference collisions.
 - Existing-order matching before a BOL-started order is created.
@@ -174,6 +184,7 @@ The package includes the three views required to preserve the current process wh
 - Send-processing and duplicate-click controls are deferred to implementation but must be included before production.
 
 ### 5.4 Failure recording and restart rules
+
 - Failures are written to Order Event History and the applicable email, approval, document, or payment record.
 - A failed combined PO/BOL send preserves the approved package and returns it for retry without marking either document Sent.
 - An incomplete intake remains a saved draft and can be resumed.
@@ -249,6 +260,7 @@ Location codes are H for Lakeshore Halsted, A for Lakeshore Arlington, G for Gra
 ## 9. Master data and calculations
 
 ### 9.1 Product formats
+
 - `1/2 BBL`
 - `6/4/12 CAN`
 - `24/16 CAN`
@@ -261,9 +273,11 @@ Location codes are H for Lakeshore Halsted, A for Lakeshore Arlington, G for Gra
 Each distinct sellable package is a separate product. The normal selector shows distributor-specific item numbers and descriptions. The internal sequential SKU is retained but hidden from ordinary selection. Quantities are whole units. No free-form miscellaneous products or duplicate identical lines are allowed.
 
 ### 9.2 Pricing
+
 Prices are distributor-specific and effective-dated. The order line saves a price snapshot. The approved final PO price becomes the invoice price. Later differences require an approved override or separate invoice adjustment.
 
 ### 9.3 Pallet estimate
+
 - CAN: 80 cases per pallet
 - 1/2 BBL: 8 units per pallet
 - 1/4 BBL: 14 units per pallet
@@ -272,6 +286,7 @@ Prices are distributor-specific and effective-dated. The order line saves a pric
 - Preserve both the system estimate and user-confirmed final pallet count
 
 ### 9.4 Contact roles
+
 PO, logistics/BOL, invoice/AP, confirmation, remittance/payment, and escalation. One primary contact per role; a contact may hold multiple roles and may be distributor-wide or location-specific. External recipients must be stored contacts.
 
 *Section status: approved. July 19, 2026 - 11:28 AM CT*

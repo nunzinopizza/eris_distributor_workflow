@@ -23,15 +23,15 @@ This document is limited to the subject identified by its title. It does not rep
 
 ## 4. Current Status
 
-**Task to Complete**
+### Task to Complete
 
 Status is assigned under `STATUS_DEFINITIONS.md`. No percentage-complete estimate is used.
 
 ## 5. Revision History
 
-| Version | Date | Status | Description |
+|Version|Date|Status|Description|
 |---|---|---|---|
-| 0.1 | July 25, 2026 | Task to Complete | Initial controlled repository document created from verified project sources. |
+|0.1|July 25, 2026|Task to Complete|Initial controlled repository document created from verified project sources.|
 
 ## 6. Known Completed Sections
 
