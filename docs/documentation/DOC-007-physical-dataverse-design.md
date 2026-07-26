@@ -59,4 +59,4 @@ See `DOC-021-decision-register.md`. Only decision entries supported by the contr
 - Distributor Cider Order-to-Payment Workflow one-page overview, prepared July 17, 2026.
 - Existing project repository records and approved design branches, when imported.
 
-Last updated: July 25, 2026 - 7:35 AM CT
+Last updated: July 25, 2026 - 7:35 AM CT 
