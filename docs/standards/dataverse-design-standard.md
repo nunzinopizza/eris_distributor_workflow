@@ -1,8 +1,9 @@
 # Dataverse Design Standard
-**ERIS Distributor Workflow**
+
+## ERIS Distributor Workflow
 
 | Document Control | Value |
-|---|---|
+| --- | --- |
 | Document ID | STD-001 |
 | Version | 1.0 |
 | Status | Project Standard |
@@ -19,7 +20,7 @@ This document defines the required Microsoft Dataverse configuration standards f
 The following properties shall be approved before creating any Dataverse tables.
 
 | Property | Required |
-|---|---|
+| --- | --- |
 | Solution Display Name | Yes |
 | Solution Unique Name | Yes |
 | Publisher Display Name | Yes |
@@ -46,6 +47,7 @@ Examples: `eris_Product`, `eris_DistributorOrder`, `eris_OrderProductLine`, `eri
 Every Dataverse table specification shall include the following properties.
 
 ### Identity
+
 - Display Name
 - Plural Display Name
 - Description
@@ -54,12 +56,14 @@ Every Dataverse table specification shall include the following properties.
 - Entity Set Name
 
 ### Table Characteristics
+
 - Table Type
 - Record Ownership
 - Primary ID
 - Primary Name Column
 
 ### Features
+
 - Attachments
 - Activities
 - Connections
@@ -72,30 +76,35 @@ Every Dataverse table specification shall include the following properties.
 - SharePoint Document Management
 
 ### Data Management
+
 - Duplicate Detection
 - Track Changes
 - Auditing
 - Long-Term Retention
 
 ### User Experience
+
 - Quick Create
 - Forms
 - Views
 - Commands
 
 ### Validation
+
 - Alternate Keys
 - Business Rules
 - Status Strategy
 
 ### Governance
+
 - Managed Properties
 
 ## 3. Column Design Standard
 
 Every column specification shall include the following.
 
-### Identity
+### Column Identity
+
 - Display Name
 - Schema Name Portion
 - Full Schema Name
@@ -103,18 +112,21 @@ Every column specification shall include the following.
 - Description
 
 ### Data Definition
+
 - Dataverse Data Type
 - Format
 - Behavior
 - Requirement Level
 
 ### Data Source
+
 - User Entered
 - System Generated
 - Snapshot
 - Calculated
 
 ### Limits
+
 - Default Value
 - Maximum Length
 - Minimum Value
@@ -122,19 +134,23 @@ Every column specification shall include the following.
 - Precision
 
 ### Date Configuration
+
 - User Local
 - Date Only
 - Time Zone Independent
 
 ### Choice Configuration
+
 - Global or Local Choice
 - Allowed Values
 - Default Value
 
 ### Calculation
+
 - Formula or Calculated Expression
 
 ### Application Configuration
+
 - Searchable
 - Sortable
 - Dashboard Availability
@@ -143,14 +159,17 @@ Every column specification shall include the following.
 - App Editability
 
 ### Security
+
 - Column Security
 - Auditing
 
-### Validation
+### Business Validation
+
 - Business Validation Rules
 - Alternate Key Participation
 
-### Governance
+### Column Governance
+
 - Managed Properties
 
 ## 4. Requirement-Level Standard
@@ -158,7 +177,7 @@ Every column specification shall include the following.
 Dataverse custom columns shall use only supported requirement levels.
 
 | Requirement | Usage |
-|---|---|
+| --- | --- |
 | Optional | Allowed |
 | Business Recommended | Allowed |
 | Business Required | Allowed |
@@ -177,7 +196,7 @@ Critical business rules shall additionally specify:
 Every Date/Time column must explicitly document its behavior.
 
 | Behavior | Purpose |
-|---|---|
+| --- | --- |
 | User Local | Time-zone conversion |
 | Date Only | Calendar dates |
 | Time Zone Independent | Fixed timestamps |
@@ -213,7 +232,7 @@ No Dataverse table shall be physically created until all required configuration 
 ## 9. Project Decisions
 
 | Item | Status |
-|---|---|
+| --- | --- |
 | Publisher Prefix | Approved |
 | Prefix Value | `eris` |
 | Relationships | Deferred until table approval |
